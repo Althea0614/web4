@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4-1</title>
+    <style>
+        h1{
+            font-family: Helvetica, sans-serif;
+            color:black;
+        }
+        .name {
+            color: Firebrick;
+            font-weight: 900;
+        }
+        .age {
+            color: navy;
+            text-decoration: underline;
+            font-weight: 100;
+        }
+    </style>
+    <script>
+        let name,age,birthyear;
+        name=window.prompt("Please input your name:");
+        birthyear=window.prompt("Please input your birth year:");
+        age = new Date().getFullYear() - parseInt(birthyear);
+
+        document.writeln("<h1>Hello, <span class='name'>"+name+"</span> !</h1>");
+        console.log("Hello,", name,"!");
+
+        if(age>1 && birthyear>0){
+            document.writeln("<h1>You are <span class='age'>"+age+"</span> years old!</h1>");
+            console.log("you are", age,"years old!");
+        }else if(age==1){
+            document.writeln("<h1>You are <span class='age'> one</span> year old!</h1>");
+            console.log("You are one year old!");
+        }else{
+            window.alert("Your input is incorrect")
+            document.writeln("<h1>You age is a mystery!</h1>");
+            console.log("Your input is incorrect!");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
